@@ -12,9 +12,10 @@
     "node": ">=11.11.0"
   },
   "scripts": {
-    "seed": "node ./database/seed.js",
-    "start": "node ./server/index.js",
-    "server:dev": "nodemon ./server/index.js",
+    "seed": "MONGO_URI=mongo node ./database/seed.js",
+    "seed:dev": "MONGO_URI=localhost node ./database/seed.js",
+    "start": "MONGO_URI=mongo node ./server/index.js",
+    "server:dev": "MONGO_URI=localhost nodemon ./server/index.js",
     "build:dev": "webpack --config webpack.config.js --watch --mode=development",
     "pretest": "eslint \"**/*\" --parser-options=jsx:true",
     "test": "jest"

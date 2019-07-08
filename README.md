@@ -2,16 +2,16 @@
 
 > Where purchasing is made easy
 
-Discovering all the features, info, and technology of a product is great, but what about when it
-comes time to purchase? The buying zone makes purchasing easy by summarizing a product's name,
+Discovering all the features, info, and technology a product offers is great, but what about when it
+comes time to purchase? Buying Zone makes purchasing easy by summarizing a product's name,
 average ratings, and a brief description, and by allowing any desired options to be selected before
 making it yours with just the click of a button.
 
 ## Table of Contents
 
 1. [Features](#features)
-1. [Developing](#developing)
-1. [Deploying](#deploying)
+1. [Development](#development)
+1. [Deployment](#deployment)
 1. [Contributing](#contributing)
 1. [Links](#links)
 
@@ -22,7 +22,7 @@ making it yours with just the click of a button.
 - Display whether a product is in-stock, based on options and quantity selected
 - Allow for a purchase to be started at the click of a button
 
-## Developing
+## Development
 
 Setting Buying Zone up for development is quick and easy!
 
@@ -30,16 +30,16 @@ First, be sure to have [MongoDB](https://docs.mongodb.com/manual/installation/) 
 [Node.js](https://nodejs.org/en/download/) (@ version 9+) installed. Next, fork the repository, and
 on your development machine run the following commands.
 
-```
+```bash
 git clone https://github.com/<your-path>/buying-zone.git
 cd buying-zone/
 npm install
 ```
 
-Running Buying Zone for development requires at least two open terminals:
+Running Buying Zone for development requires at least two open terminal sessions:
 
 ### First terminal:
-```
+```bash
 npm run build:dev
 ```
 - Compiles the project using webpack in development mode. The `--watch` flag is set so changes are
@@ -61,7 +61,7 @@ files
 npm run seed
 ```
 
-- Seeds the database by running `/database/seed.js`
+- Seeds the database with mock data by running `node ./database/seed.js`
 
 #### Manual database queries
 
@@ -76,10 +76,10 @@ MongoDB and the `mongo` shell
 ```
 npm test
 ```
-- Checks all `.js` and `.jsx` files against Airbnb style guide using ESLint
+- Checks all `.js` and `.jsx` files against Airbnb style guide using ESLint in pretest
 - Runs all test suites
 
-## Deploying
+## Deployment
 
 Buying Zone is not yet deployable. Please check back later!
 

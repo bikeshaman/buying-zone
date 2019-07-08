@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.Promise = Promise;
 
-const connect = () => mongoose.connect('mongodb://mongo:27017/trekbikes', {
+const connect = () => mongoose.connect(`mongodb://${process.env.MONGO_URI}:27017/trekbikes`, {
   useNewUrlParser: true,
 });
 
@@ -13,8 +13,6 @@ db.on('error', async () => {
 });
 
 connect();
-// mongoose.connect('mongodb://mongo:27017/trekbikes', { useNewUrlParser: true });
-// mongoose.connect('mongodb://localhost:27017/trekbikes', { useNewUrlParser: true });
 
 const { Schema } = mongoose;
 
