@@ -5,7 +5,7 @@ services:
     restart: always
     image: mongo
     volumes:
-      - ./database:/data/db
+      - ./database/data:/data/db
     expose:
       - 27017
   buying-zone:
